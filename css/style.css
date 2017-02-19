@@ -10,3 +10,15 @@ body {
 
   background-color: #393e46;
 }
+
+h1 {
+  text-align: center;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+input {
+  margin-top: 2px;  
+}

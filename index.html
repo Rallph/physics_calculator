@@ -1,3 +1,60 @@
 <!DOCTYPE HTML>
 
-<h1>Hello World!</h1>
+<html>
+  <head>
+    <title>Physics Cannon Calculator</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <h1>Physics Cannon Calculator</h1>
+    <br>
+    <div class="container-fluid">
+      <div class="jumbotron">
+      <h3>Finding velocity components</h3>
+      This is for finding the components of the velocity when it's at an angle.
+
+        <div class="row">
+          <div class="col">
+            Is the angle above or below the horizontal?
+
+            <div>
+            <form>
+              <label><input id = "r1" type="radio" name="above-below" checked="checked"> Above</label>
+              <label><input id = "r2" type="radio" name="above-below" > Below</label>
+              <br>
+              <input id = "angle" type="number" step = "0.01" width = "20" placeholder = "Enter angle measurement">
+              <br>
+              <input id = "vel" type="number" step = "0.01" width = "20" placeholder = "Enter Velocity">
+              <br>
+              <button id="comp" class = "btn btn-primary">Submit</button>
+            </form>
+            </div>
+          </div>
+
+          <div id = "voxy" class="col">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron">
+
+      </div>
+
+      <div class="jumbotron">
+
+      </div>
+    </div>
+
+
+
+    <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <script src = "js/index.js"></script>
+  </body>
+</html>
