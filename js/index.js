@@ -15,9 +15,14 @@ function getComponents() {
   var vox = vel * Math.cos(toRadians(angle));
   var voy = vel * Math.sin(toRadians(angle));
 
+  var output = "<h3>Results</h3>Horizontal Velocity is: " + vox.toFixed(2) + " m/s<br>Vertical Velocity is: " + voy.toFixed(2) + " m/s" + direction;
+
+  if ((vox == 0.00) || (voy == 0.00))
+    output = "Enter angle and velocity for components";
 
 
-  $("#voxy").html("<h3>Results</h3>Horizontal Velocity is: " + vox.toFixed(2) + " m/s<br>Vertical Velocity is: " + voy.toFixed(2) + " m/s" + direction );
+
+  $("#voxy").html(output);
 }
 
 
