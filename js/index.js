@@ -26,9 +26,50 @@ function getComponents() {
 }
 
 
+function getVo() {
+
+  var vox = $("#invox").val();
+  var voy = $("#invoy").val();
+
+  var vo = (Math.sqrt(Math.pow(vox,2) + Math.pow(voy,2))).toFixed(2);
+
+  var output = "<h3>Result</h3>The original velocity is " + vo + " m/s";
+
+  if ((vox == 0.0) || (voy == 0.0))
+    output = "Please enter the velocity components";
+
+  $("#vo").html(output);
+}
+
+
+function getDistances() {
+
+  var vert = document.getElementById('vert').value;
+  var hori = document.getElementById('hor').value;
+  var time = document.getElementById('time').value;
+
+
+}
+
+
+
+
+
 $(document).ready(function () {
-    $("#comp").on("click", function(e) {
+
+    $(".compbox").on("keyup", function(e) {
       e.preventDefault();
       getComponents()
+    });
+
+    $(".vobox").on("keyup", function(e) {
+      e.preventDefault();
+      getVo();
+    });
+
+
+    $(".distbox").on("keyup", function(e) {
+      e.preventDefault();
+      getDistances();
     });
 });
