@@ -48,7 +48,25 @@ function getDistances() {
   var hori = document.getElementById('hor').value;
   var time = document.getElementById('time').value;
 
+  var hordist = time * hori;
+  var horout = "<h3>Horizontal</h3>The horizontal distance is: " + hordist + " meters";
 
+  $("#horres").html(horout);
+
+
+  var verout = "<h3>Vertical</h3>";
+  var verd = 0.0;
+
+/*  if (vert > 0) {
+
+    var tpeak = vert / 10;
+    var dtop = 0.5 * vert * tpeak;
+    var tleft = time - tpeak;
+    var ddown = 0.5 * tleft * (10 * tleft);
+
+
+  }
+*/
 }
 
 
