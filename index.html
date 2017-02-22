@@ -134,13 +134,60 @@
       </div>
 
       <div id = "vertres" class="col-3">
-      
+
       </div>
 
       <div id = "horres" class="col-3">
 
       </div>
     </div>
+  </div>
+
+  <div class="jumbotron">
+    <h3>Finding Missing Angles</h3>
+    This is for finding the angle of the velocity using given sides.
+    <br>
+    <br>
+      <div class="row">
+        <div class="col">
+          Which sides are known?
+
+          <div>
+          <form>
+            <fieldset class = "form-group">
+              <div class = "form-check">
+                <label class = "form-check-label check">
+                  <input id = "c1" class = "form-check-input checkbox" type="checkbox"> Opposite</label>
+              </div>
+              <div class = "form-check check">
+                <label class = "form-check-label"><input id = "c2" class = "form-check-input checkbox" type="checkbox"> Adjacent</label>
+              </div>
+              <div class = "form-check check">
+                <label class = "form-check-label"><input id = "c3" class = "form-check-input checkbox" type="checkbox"> Hypotenuse</label>
+              </div>
+            </fieldset>
+
+        <label for "in1" class = "">First Side</label>
+            <div class = "form-group row">
+              <div class = "col-7">
+                <input id = "in1" class = "form-control angbox" type="number" step = "0.01" placeholder="First Side"> in m
+              </div>
+            </div>
+
+            <label for "in2" class = "">Second Side</label>
+            <div class = "form-group row">
+              <div class = "col-7">
+                <input id = "in2" class = "form-control angbox" type="number" step = "0.01" placeholder="Second Side"> in m
+              </div>
+            </div>
+
+
+          </form>
+          </div>
+        </div>
+
+        <div id = "angout" class="col"></div>
+      </div>
   </div>
 
     <div class="jumbotron">

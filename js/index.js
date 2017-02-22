@@ -2,6 +2,11 @@ function toRadians(deg) {
   return deg * (Math.PI / 180);
 }
 
+function toDeg(rad) {
+
+  return rad * (180 / Math.PI);
+}
+
 
 function getComponents() {
 
@@ -57,16 +62,47 @@ function getDistances() {
   var verout = "<h3>Vertical</h3>";
   var verd = 0.0;
 
-/*  if (vert > 0) {
+ //if (vert > 0) {
 
     var tpeak = vert / 10;
     var dtop = 0.5 * vert * tpeak;
     var tleft = time - tpeak;
     var ddown = 0.5 * tleft * (10 * tleft);
 
+    verout += "Time to peak is: " + tpeak.toFixed(2) + " seconds.<br>Vertical distance to peak is: " + dtop.toFixed(2) + " meters.<br>Vertical Distance from peak is: " + ddown.toFixed(2) + "meters.<br>Total vertical distance traveled is: " + (dtop + ddown).toFixed(2) + " meters";
 
+    $("#vertres").html(verout);
+//  }
+
+}
+
+function getAngle() {
+
+  var c1 = document.getElementById('c1').checked; // opposite
+  var c2 = document.getElementById('c2').checked; // adjacent
+  var c3 = document.getElementById('c3').checked; // hypotenuse
+
+  var in1 = $("#in1").val();
+  var in2 = $("#in2").val();
+  var result = 0.0;
+  var output = "<h3>Result</h3>";
+
+  if (c1 && c2) { // tan
+      result = toDeg(Math.atan(in1 / in2));
+
+  } else if (c1 && c3) { // sin
+    result = toDeg(Math.asin(in1 / in2));
+
+  } else if (c2 && c3 ) { // cos
+    result = toDeg(Math.acos(in1 / in2));
+
+  } else {
+    output = "Please select the sides";
   }
-*/
+
+  output += "The angle is: " + result.toFixed(2) + " degrees";
+  $("#angout").html(output);
+
 }
 
 
@@ -77,7 +113,7 @@ $(document).ready(function () {
 
     $(".compbox").on("keyup", function(e) {
       e.preventDefault();
-      getComponents()
+      getComponents();
     });
 
     $(".vobox").on("keyup", function(e) {
@@ -90,4 +126,11 @@ $(document).ready(function () {
       e.preventDefault();
       getDistances();
     });
+
+    $(".angbox").on("keyup", function(e) {
+      e.preventDefault();
+      getAngle();
+    });
+
+
 });
